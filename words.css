@@ -1,0 +1,20 @@
+#wordsContainer {
+    height: 100px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid black;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+}
+
+#gameInfo {
+    margin: auto;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid black;
+}
+

@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+#mainContainer {
+    width: 100%;
+    max-width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+#head {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: auto;
+    opacity: 0;
+}
+
+/* #torso {
+    height: 150px;
+    border: 1px solid black;
+    width: 0px;
+    margin: auto;
+    position: relative
+} */
+
+
+
+#torsoContainer {
+    height: 150px;
+    /* border: 1px solid black; */
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+   
+}
+
+.armContainer {
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid white; */
+    position: relative;
+    overflow: hidden;
+}
+
+#torso {
+    border-right: 2px solid black;
+     opacity: 0;
+    margin: auto;
+}
+
+#leftArm {
+
+    transform: rotate(-50deg);
+    opacity: 0;
+
+    position: absolute;
+    top: 0px;
+    right: 21px;
+    height: 100px;
+    width: 0px;
+    border: 1px solid black;
+
+}
+
+#rightArm {
+
+    transform: rotate(50deg);
+    opacity: 0;
+
+    position: absolute;
+    top: 0px;
+    left: 21px;
+    height: 100px;
+    width: 0px;
+    border: 1px solid black;
+
+}
+
+#legs {
+    width: 100%;
+    height: 100px;
+    margin-left: -1px;
+    /* border: 1px solid black;s */
+   
+    display: flex
+}
+
+.legContainer {
+    width: 50%;
+    position: relative;
+
+}
+
+#leftLeg {
+    /* transform:skewY(90deg); */
+    transform: rotate(27deg);
+    opacity: 0;
+
+    position: absolute;
+    top: -6px;
+    right: 21px;
+    height: 100px;
+    width: 0px;
+    border: 1px solid black;
+}
+
+#rightLeg {
+    /* transform:skewY(90deg); */
+    transform: rotate(-27deg);
+    opacity: 0;
+
+    position: absolute;
+    top: -6px;
+    left: 21px;
+    height: 100px;
+    width: 0px;
+    border: 1px solid black;
+}
