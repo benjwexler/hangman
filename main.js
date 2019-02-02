@@ -21,7 +21,8 @@ let bodyInstructions = {
 }
 
 let setNumbOfGuesses = (wordLength) => {
-    guessesLeft = wordLength + 1
+    // guessesLeft = wordLength + 1
+    guessesLeft = 7
     document.getElementById("guessesLeft").innerText = guessesLeft
 }
 
