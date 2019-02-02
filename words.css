@@ -18,3 +18,18 @@
     border: 1px solid black;
 }
 
+.scoreContainer {
+    transition: color 1s, font-size 1s;
+    /* color: black; */
+}
+
+.green {
+    color: green;
+    font-size: 26px;
+}
+
+.red {
+    color: red;
+    font-size: 26px;
+}
+

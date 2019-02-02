@@ -1,3 +1,5 @@
+alert("Lets Play Hangman. The Category is animals! Use your keyboard to guess the letters!")
+
 let words = ["dog", "cat", "elephant", "bird", "fish" ]
 
 let word
@@ -25,7 +27,11 @@ let setNumbOfGuesses = (wordLength) => {
 
 
 let showElement = (element) => {
-    document.getElementById(element).style.opacity = 1
+    console.log(element)
+    if(element) {
+        document.getElementById(element).style.opacity = 1
+    }
+    
 }
 
 
@@ -93,6 +99,9 @@ let checkIfGameOver = () => {
     if(stateOfWord === word) {
         inCorrectGuesses = 0
         resetBody()
+        // document.getElementById("winsContainer").style.color = "green";
+        document.getElementById("winsContainer").classList.add("green")
+        setTimeout(function(){ document.getElementById("winsContainer").classList.remove("green") }, 1000);
         wins++
         document.getElementById("wins").innerText = wins
         
@@ -103,6 +112,8 @@ let checkIfGameOver = () => {
     if(guessesLeft === 0) {
         inCorrectGuesses = 0
         resetBody()
+        document.getElementById("lossesContainer").classList.add("red")
+        setTimeout(function(){ document.getElementById("lossesContainer").classList.remove("red") }, 1000);
         losses++
         document.getElementById("losses").innerText = losses
         randomWord()
