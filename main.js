@@ -30,6 +30,29 @@ let showElement = (element) => {
 
 
 
+let hideElement = (index) => {
+
+    
+    // console.log(bodyInstructions[parseInt(index)])
+
+    // showElement(bodyInstructions[inCorrectGuesses])
+
+    document.getElementById(bodyInstructions[parseInt(index)]).style.opacity = 0
+    console.log(index)
+}
+
+let resetBody = () => {
+    console.log(Object.keys(bodyInstructions))
+
+    let bodyParts = Object.keys(bodyInstructions)
+
+    bodyParts.forEach(hideElement) 
+
+   
+}
+
+
+
 
 
 
@@ -68,15 +91,22 @@ let setCharAt = (str,index,chr) => {
 
 let checkIfGameOver = () => {
     if(stateOfWord === word) {
+        inCorrectGuesses = 0
+        resetBody()
         wins++
         document.getElementById("wins").innerText = wins
+        
         randomWord()
+        
     }
 
     if(guessesLeft === 0) {
+        inCorrectGuesses = 0
+        resetBody()
         losses++
         document.getElementById("losses").innerText = losses
         randomWord()
+        
     }
 
 }
